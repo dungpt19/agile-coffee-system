@@ -1,0 +1,292 @@
+/* custom.scss */    
+
+/* import the necessary Bootstrap files */
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+
+/* make changes to the !default Bootstrap variables */  
+$primary: #D44000;
+$secondary: #F3752D;
+$tertiary: white ;
+$background: #FCFCFC;
+$purple: #6200EE;
+$white: white;
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "purple": $purple,
+  "white": $white,
+);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+$navbar-light-active-color: $tertiary; 
+$navbar-light-color: $tertiary;
+$navbar-light-brand-color: $tertiary;
+        
+
+$navbar-light-hover-color: $tertiary;
+$navbar-light-brand-hover-color: $tertiary;
+$body-bg: $background;
+$nav-tabs-link-active-color: $primary;
+/* finally, import Bootstrap to set the changes! */
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+.btn-secondary {
+  color: #fff;
+  background-color: $secondary;
+  border-color: $secondary;
+  &:hover {
+    color: $secondary;
+    // @include gradient-bg($hover-background);
+    background-color: $white;
+    border-color: $secondary;
+    a {
+      color: $secondary !important;
+    }
+  }
+}
+
+.btn-outline-secondary:hover {
+  color: $white;
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+.coffee_hover:hover {
+  background-color: #FAEACB;
+  color: $white;
+}
+
+.coffee_hover:hover .col_sm {
+  background-color: #FAEACB;
+  color: $white;
+}
+
+.coffee_hover:hover .add {
+  display: block;
+}
+
+.intro {
+  background: url("../img/harold.jpg");
+  /* background-size: cover; */
+  background-attachment: fixed;
+  /* background-position: center; */
+  height: 70vh;
+}
+
+.back-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 0;
+}
+
+.add {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+}
+.dropdown-menu{
+  z-index: 99;
+}
+.swapCart{
+  position: relative;
+}
+.swap3{
+    display: flex;
+    gap: 20px;
+}
+.frontof{
+  z-index: -1;
+}
+.navbar-nav .dropdown-menu{
+  position: absolute!important;
+  right: 0;
+  width: 300px;
+  top: calc(100% + 5px);
+  
+}
+
+.cart-detail{
+  max-height: 200px;
+  overflow: auto;
+}
+
+.dropdown-toggle::after{
+  all:unset;
+}
+.navbar {
+  align-items: flex-end;
+}
+
+.product-quantity input{
+  width: 40px;
+}
+.product-quantity {
+  float: left; 
+  width: 10%;
+}
+.product-quantity:before {
+  content: 'x';
+}
+.remove-product {
+  border: 0;
+  padding: 4px 8px;
+  background-color: #c66;
+  color: #fff;
+  font-family: font-bold;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.bg-footer {
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+}
+
+.row-history{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around;
+}
+
+.form-history {
+  width: 60%;
+  margin: 0 auto !important;
+  margin-top: 20px !important;
+}
+
+
+
+.table-history {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.col-history {padding-bottom: 5px !important;}
+
+
+
+.repurchase-history {
+  background-color: #276678;
+  color: #fff;
+  width: 100px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 12px;
+  border: #276678;
+}
+
+.form-content-history {
+  margin: 10px;
+}
+
+.between {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.flex-row-history {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-col-history {
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.space-history {
+  justify-content:space-between;
+}
+
+.img-coffee {
+  width: 100%;
+  height: 100px;
+}
+.card-history {
+  margin: 0 auto; 
+  width: 40%;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding:10px 30px 30px 30px;
+  background-color: $tertiary;
+  box-shadow: 5px 5px 8px #9f9696;
+}
+
+.margin-1 {margin-left: 20px;}
+
+.btn-order-again {
+  border: 1px solid $secondary;
+  background: $secondary;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+.btn-view-order-detail:hover{
+  color: $secondary;
+  border: 1px solid $secondary;
+}
+
+.btn-order-again:hover{
+  background: $secondary;
+  border: 1px solid 117248;
+  color: #fff;
+}
+
+.nav-link {
+  color: $secondary;
+}
+.nav-link:hover {color: $primary;} 
+.bold-history{
+  font-weight: bold;
+}
+.margin-2 {margin-right: 7px;}
+.totals-in-history{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.date-order{
+  color: #756e6e; 
+  display: flex; margin-right: 5px; 
+  margin-bottom: 10px;
+  justify-content: flex-end;
+
+}
+.space-footer{
+  margin-top: auto;
+  width: 100%;
+  flex: 0 0 50px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@500&display=swap');
+.font-nav{
+  font-size: 20px;
+  font-family: 'Anek Devanagari', sans-serif;
+}
